@@ -88,7 +88,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #
       <p class="section-label">Posição do texto (AO)</p>
       <div class="field">
         <label>Vertical — <span id="texto-y-val">400</span>px</label>
-        <input type="range" id="texto-y" min="200" max="780" value="400" step="5" oninput="document.getElementById('texto-y-val').textContent=this.value; updatePreview()">
+        <input type="range" id="texto-y" min="200" max="780" value="470" step="5" oninput="document.getElementById('texto-y-val').textContent=this.value; updatePreview()">
       </div>
     </div>
 
@@ -322,7 +322,7 @@ async function render(canvas) {
       ctx.fillStyle = '#1e1e1e';
       ctx.textBaseline = 'top';
       ctx.textAlign = 'center';
-      const maxW = W - 190 * 2;
+      const maxW = W - 150 * 2;
       const lh = fontSize * 1.25;
       const lines = wrapLines(ctx, titulo, maxW);
       const textoY = parseInt(document.getElementById('texto-y').value);
