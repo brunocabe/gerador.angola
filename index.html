@@ -288,8 +288,8 @@ async function render(canvas) {
       lines.forEach((line, i) => {
         const lw = ctx.measureText(line).width;
         const lx = (W - lw) / 2;
-        const ly = 1059 + 90 + i * lh;
-        ctx.fillStyle = '#1e1e1e';
+        const ly = 1059 + 60 + i * lh;
+        ctx.fillStyle = '#ffffff';
         ctx.fillRect(lx - 14, ly - 6, lw + 28, boxH);
         ctx.fillStyle = '#000000';
         ctx.fillText(line, W / 2, ly + 2);
@@ -319,10 +319,10 @@ async function render(canvas) {
     // 4. Título na área vermelha: começa em y=400, centralizado, padding 130px
     if (titulo) {
       ctx.font = getFontStr(fontSize);
-      ctx.fillStyle = '#ffffff';
+      ctx.fillStyle = '#1e1e1e';
       ctx.textBaseline = 'top';
       ctx.textAlign = 'center';
-      const maxW = W - 130 * 2;
+      const maxW = W - 150 * 2;
       const lh = fontSize * 1.25;
       const lines = wrapLines(ctx, titulo, maxW);
       const textoY = parseInt(document.getElementById('texto-y').value);
