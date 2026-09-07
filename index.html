@@ -288,8 +288,8 @@ async function render(canvas) {
       lines.forEach((line, i) => {
         const lw = ctx.measureText(line).width;
         const lx = (W - lw) / 2;
-        const ly = 1059 + 60 + i * lh;
-        ctx.fillStyle = '#ffffff';
+        const ly = 1059 + 90 + i * lh;
+        ctx.fillStyle = '#1e1e1e';
         ctx.fillRect(lx - 14, ly - 6, lw + 28, boxH);
         ctx.fillStyle = '#000000';
         ctx.fillText(line, W / 2, ly + 2);
